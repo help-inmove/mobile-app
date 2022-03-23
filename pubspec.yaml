@@ -33,7 +33,7 @@ dependencies:
   stacked_services:
   freezed_annotation:
   web_socket_channel:
-
+  flutter_blue:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
