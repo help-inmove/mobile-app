@@ -8,6 +8,7 @@
 
 import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
+import 'package:stacked_services/stacked_services.dart';
 
 import '../services/ble_service.dart';
 
@@ -19,5 +20,6 @@ void setupLocator({String? environment, EnvironmentFilter? environmentFilter}) {
       environment: environment, environmentFilter: environmentFilter);
 
 // Register dependencies
+  locator.registerSingleton(NavigationService());
   locator.registerLazySingleton(() => BLEService());
 }

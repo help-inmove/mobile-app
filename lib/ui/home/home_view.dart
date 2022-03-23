@@ -27,7 +27,10 @@ class HomeView extends StatelessWidget {
                               ? "No Name "
                               : result.device.name),
                           subtitle: Text(result.device.id.toString()),
-                          onTap: () => {},
+                          onTap: () {
+                            result.device.connect();
+                            model.navigateToScan(result.device);
+                          },
                         ),
                       )
                       .toList(),
